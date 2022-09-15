@@ -1065,9 +1065,7 @@ ul.gal-list {
 
 }
 
-.form form > p .btn {
-  min-width: 0;
-}
+
 
 .modal-window {
   position: fixed;
@@ -1270,6 +1268,9 @@ ul.gal-list {
 }
 
 @media screen and (max-width: 600px) {
+  .form form > p .btn {
+    min-width: 0;
+  }
   .btn {
     min-width: 0;
   }
