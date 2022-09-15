@@ -209,7 +209,7 @@ let maskPhone = [...document.querySelectorAll('.phone-mask')];
 function getMaskPhone() {
     if (maskPhone.length) {
         [].forEach.call(document.querySelectorAll('input'), function (input) {
-            console.log(input);
+            // console.log(input);
             if (input.classList.contains('phone-mask')) {
                 let keyCode;
 
@@ -250,6 +250,26 @@ function getMaskPhone() {
 }
 
 getMaskPhone();
+
+// Get all sections that have an ID defined
+const sections = document.querySelectorAll(".section");
+const menuItems = document.querySelectorAll(".menu ul a");
+
+// Add an event listener listening for scroll
+menuItems.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        let link = btn.getAttribute("href");
+
+
+        document.querySelector('.header-menu').classList.remove('opened');
+        document.querySelector('.burger').classList.remove('opened');
+        document.body.classList.remove('no-scroll');
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $(link).offset().top - 140
+        }, 600);
+    })
+});
 
 
 

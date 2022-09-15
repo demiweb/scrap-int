@@ -63,11 +63,14 @@ main {
           box-sizing: border-box;
           transition: color 0.3s ease;
           border-bottom: 2px solid rgba(255, 255, 255, 0);
+          &:hover {
+            border-bottom: 2px solid #28324B;
+          }
         }
 
         &.active {
           a {
-            border-bottom: 2px solid #28324B;
+
           }
         }
 
@@ -93,13 +96,7 @@ main {
       padding: 7px 0;
       cursor: pointer;
 
-      &:hover {
-        & + ul {
-          opacity: 1;
-          transition: opacity 0.3s ease;
-          pointer-events: auto;
-        }
-      }
+
     }
 
     ul {
@@ -130,6 +127,13 @@ main {
       }
 
       box-shadow: 0 0 9px 3px rgba(18, 18, 18, 0.18);
+    }
+    &:hover {
+       ul {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+        pointer-events: auto;
+      }
     }
   }
 }
@@ -509,7 +513,7 @@ ul.gal-list {
       top: 50%;
       left: 0;
       transform: translate(0, -50%);
-      background: url("../img/gal1.png") no-repeat center / 25px, #284166;
+      background: url("../img/gal1.svg") no-repeat center / 25px, #284166;
     }
   }
 

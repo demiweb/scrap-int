@@ -630,8 +630,8 @@ main {
         -o-transition: color 0.3s ease;
         transition: color 0.3s ease;
         border-bottom: 2px solid rgba(255, 255, 255, 0); }
-      .header-menu .menu ul li.active a {
-        border-bottom: 2px solid #28324B; }
+        .header-menu .menu ul li a:hover {
+          border-bottom: 2px solid #28324B; }
       .header-menu .menu ul li:last-child {
         margin-right: 0; }
   .header-menu .lang {
@@ -651,12 +651,6 @@ main {
       color: #28324B;
       padding: 7px 0;
       cursor: pointer; }
-      .header-menu .lang span:hover + ul {
-        opacity: 1;
-        -webkit-transition: opacity 0.3s ease;
-        -o-transition: opacity 0.3s ease;
-        transition: opacity 0.3s ease;
-        pointer-events: auto; }
     .header-menu .lang ul {
       opacity: 0;
       pointer-events: none;
@@ -692,6 +686,12 @@ main {
           text-align: right;
           color: #28324B;
           padding: 7px 12px; }
+    .header-menu .lang:hover ul {
+      opacity: 1;
+      -webkit-transition: opacity 0.3s ease;
+      -o-transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease;
+      pointer-events: auto; }
 
 .hero-container {
   height: 100%;
@@ -1139,7 +1139,7 @@ ul.gal-list {
       -webkit-transform: translate(0, -50%);
           -ms-transform: translate(0, -50%);
               transform: translate(0, -50%);
-      background: url("../img/gal1.png") no-repeat center/25px, #284166; }
+      background: url("../img/gal1.svg") no-repeat center/25px, #284166; }
   ul.gal-list.done {
     opacity: 1; }
     ul.gal-list.done li {
